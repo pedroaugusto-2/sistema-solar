@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+h1
+{
+    width: 59px;
+    height: 59px;
+    background-color: #ffe600;
+    color: #ffe600;
+    box-shadow: 0 0 10px #ffe600, 0 0 40px #ffe600, 0 0 80px #ffe600;
+    border-radius: 60px;
+}
+.loader
+{
+    position: relative;
+    width: 900px;
+    height: 900px;
+    background: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000;
+    border-radius: 18px;
+}
+.loader:hover
+{
+    width: 900px;
+    height: 900px;
+    background: #0026ff, #fff;
+    box-shadow: 0 0 10px #00d9ff, 0 0 40px #00d9ff, 0 0 80px #00d9ff;
+    transition: 1s;
+}
+.circle
+{
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border: 2px solid #191919;
+    border-radius: 50%;
+    animation: animate 7s linear infinite;
+}
+.circle2
+{
+    width: 500px;
+    height: 500px;
+    animation: animate 5s linear infinite;
+}
+.circle3
+{
+    width: 500px;
+    height: 500px;
+    animation: animate 5s linear infinite;
+}
+.circle4
+{
+    width: 500px;
+    height: 500px;
+    animation: animate 5s linear infinite;
+}
+.circle5
+{
+    width: 500px;
+    height: 500px;
+    animation: animate 5s linear infinite;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+.circle::before
+{
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background: var(--clr);
+    border-radius: 50%;
+    box-shadow: 0 0 20px var(--clr),
+    0 0 60px var(--clr);
+}
